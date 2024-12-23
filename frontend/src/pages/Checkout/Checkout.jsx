@@ -62,7 +62,7 @@ const Checkout = () => {
 
         // Trigger Razorpay Payment
         const options = {
-          key: "rzp_test_XPcfzOlm39oYi8", // Razorpay Key ID
+          key: "rzp_live_6JnMJv4y3yPGxd", // Razorpay Key ID
           amount: data.amount, // Amount in paise (INR * 100)
           currency: data.currency,
           order_id: data.razorpayOrderId,
