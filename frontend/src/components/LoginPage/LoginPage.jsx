@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react'
 import './LoginPage.css'
-// import bg from './abstract-luxury-soft-red-background-christmas-valentines-layout-design-studio-room-web-template-business-report-with-smooth-circle-gradient-color.jpg'
 import { useState } from 'react'
 import axios from 'axios'
-// import Loading from '../../components/Loading/Loading'
 import bg from './bg.png'
 import toast from 'react-hot-toast'
 import { Link } from 'react-router-dom'
@@ -11,14 +9,13 @@ import { Link } from 'react-router-dom'
 function LoginPage() {
     useEffect(() => {
         window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
+            top: 0,
         });
-      }, []);
+    }, []);
     const [loading, setLoading] = useState(false)
     const [formData, setFormData] = useState({
-        Email: "",
-        Password: ""
+        email: "",
+        password: ""
     })
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -32,25 +29,26 @@ function LoginPage() {
         setLoading(true)
         event.preventDefault()
         try {
-            const response = await axios.post("https://api.camrosteel.com/api/v1/Login", formData)
-            console.log(response.data);
-            toast.success('Login SuccessFull')
-            sessionStorage.setItem('token', response.data.token)
-            sessionStorage.setItem('user', JSON.stringify(response.data.login))
-            window.location.href = "/"
-
+            const response = await axios.post("https://api.mrandmrsperfecttrips.in/api/login", formData)
+            console.log(response)
+            if (response.status === 200) {
+                toast.success('Login SuccessFull')
+                sessionStorage.setItem("userId", response.data.data._id)
+                sessionStorage.setItem("Login", true)
+                const redirectUrl = sessionStorage.getItem("redirectAfterLogin");
+                if (redirectUrl) {
+                    sessionStorage.removeItem("redirectAfterLogin");
+                    window.location.href = redirectUrl;
+                } else {
+                    window.location.href = "/"
+                }
+            }
             setLoading(false)
         }
         catch (err) {
-            console.log(err.response.data.
-                message
-
-            );
-            toast.error(err.response.data.
-                message)
-
+            console.log(err.response.data.message);
+            toast.error(err.response.data.message)
             setLoading(false)
-
         }
     }
     return (
@@ -76,9 +74,9 @@ function LoginPage() {
                                     Discover the finest Utensils Brand, offering unparalleled quality and innovation to elevate your culinary experience to new heights.
                                 </p> */}
 
-                                <form >
-                                    <input required type="email" name="Email" onChange={handleChange} value={formData.Email} placeholder='Email Id' />
-                                    <input required type="password" name="Password" value={formData.Password} onChange={handleChange} placeholder='Password' />
+                                <form onSubmit={handleSubmit}>
+                                    <input required type="email" name="email" onChange={handleChange} value={formData.email} placeholder='email Id' />
+                                    <input required type="password" name="password" value={formData.password} onChange={handleChange} placeholder='password' />
 
                                     <div className="flex">
                                         <div className="keep">
@@ -89,7 +87,7 @@ function LoginPage() {
                                         </div>
                                     </div>
 
-                                    <input  type="submit" value="SIGN IN " />
+                                    <input type="submit" value="SIGN IN " />
                                 </form>
                             </div>
                         </div>

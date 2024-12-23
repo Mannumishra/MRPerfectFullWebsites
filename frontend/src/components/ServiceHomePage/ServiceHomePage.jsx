@@ -9,12 +9,12 @@ import internation from './internation.jpg'
 import { Link } from 'react-router-dom'
 
 function ServiceHomePage() {
-    useEffect(()=>{
-        window.scrollTo({
-            top : 0,
-            behavior : 'smooth'
-        })
-    })
+    // useEffect(()=>{
+    //     window.scrollTo({
+    //         top : 0,
+    //         behavior : 'smooth'
+    //     })
+    // })
     return (
         <section className='service-home-page-section'>
             <div className="service-container">

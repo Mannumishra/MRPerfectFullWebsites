@@ -19,7 +19,6 @@ function DomesticTour() {
         getcityData()
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
         })
     }, [])
     return (
@@ -48,7 +47,7 @@ function DomesticTour() {
 
                 <div className="domestic-service-row">
                     {
-                        data.map((item,index) =>
+                        data.map((item, index) =>
                             <div className="col">
                                 <div className="img">
                                     <img src={item.cityimage} alt="" />

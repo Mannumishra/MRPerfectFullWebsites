@@ -62,21 +62,21 @@
     width: 100%;
     padding: 10px 0px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.459);
+    background-color: rgba(0, 0, 0, 0.677);
     color: white;
     position: absolute;
     bottom: 0%;
     left: 0%;
-    height: 130px;
+    height: fit-content;
 }
 
 .mostpopular-section .popular-container .main-container .col .info span{
     position: relative;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
 }
 
-.mostpopular-section .popular-container .main-container .col .info span::after{
+/* .mostpopular-section .popular-container .main-container .col .info span::after{
     content: '';
     height: 2px;
     width: 0%;
@@ -85,7 +85,7 @@
     left: 0;
     bottom: 0;
     transition: all 0.4s ease-in-out;
-}
+} */
 
 .mostpopular-section .popular-container .main-container .col:hover .info span::after{
     width: 100%;

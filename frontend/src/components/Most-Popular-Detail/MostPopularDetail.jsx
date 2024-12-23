@@ -5,9 +5,7 @@ import { Button, Container, Grid, TextField, Typography } from "@mui/material";
 import Slider from "react-slick";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
-import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 
 const style = {
   position: 'absolute',
@@ -25,15 +23,7 @@ const MostPopularDetail = () => {
   const { _id } = useParams();
   const [data, setData] = useState({});
   const [days, setDays] = useState([]);
-  const [packageData, setPackageData] = useState({
-    packageCity: data.packageheading,
-    name: "",
-    email: "",
-    phone: "",
-    address: "",
-    amount: "",
-  });
-const navigate = useNavigate()
+  const navigate = useNavigate()
   const getApiData = async () => {
     try {
       let res = await axios.get("https://api.mrandmrsperfecttrips.in/api/package/" + _id);
@@ -51,75 +41,36 @@ const navigate = useNavigate()
     }
   };
 
-  const getInputdata = (e) => {
-    const { name, value } = e.target;
-    setPackageData({ ...packageData, [name]: value });
-  };
 
-  const postData = async (e) => {
-    e.preventDefault();
-    try {
-        // Step 1: Send user query to create an inquiry
-        const userResponse = await axios.post("https://api.mrandmrsperfecttrips.in/api/package-inquery", packageData);
-        console.log(userResponse);
-
-        // Check if the response was successful and contains required data
-        if (userResponse.status === 200 && userResponse.data?.data?.orderId && userResponse.data?.data?.currency && userResponse.data?.data?.amount) {
-            toast.success("Your query has been sent successfully. Redirecting to payment...");
-
-            const { orderId, currency, amount } = userResponse.data.data; // Correctly extract response data
-
-            // Step 2: Create Razorpay order and open payment modal
-            const options = {
-                key:"rzp_live_6JnMJv4y3yPGxd", // Replace with your Razorpay key (from environment)
-                amount: amount * 100, // Convert to paise
-                currency: currency,
-                name: packageData.packageCity,
-                description: `Payment for ${packageData.packageCity}`,
-                order_id: orderId,
-                handler: function (response) {
-                    // Call the verifyPayment API to verify the payment
-                    axios.post("https://api.mrandmrsperfecttrips.in/api/verify-payment", {
-                        razorpay_payment_id: response.razorpay_payment_id,
-                        razorpay_order_id: response.razorpay_order_id,
-                        razorpay_signature: response.razorpay_signature,
-                    }).then((verificationResponse) => {
-                        if (verificationResponse.status === 200) {
-                            toast.success("Payment Successful!");
-                            navigate("/success")
-                            
-                        } else {
-                            toast.error("Payment verification failed.");
-                        }
-                    }).catch((error) => {
-                        console.error("Payment verification failed:", error);
-                        toast.error("Payment verification failed. Please try again.");
-                    });
-                },
-                prefill: {
-                    name: packageData.name,
-                    email: packageData.email,
-                    contact: packageData.phone,
-                },
-                notes: {
-                    address: packageData.address,
-                },
-                theme: {
-                    color: "#F37254", // You can change the theme color as required
-                },
-            };
-
-            const razorpay = new window.Razorpay(options);
-            razorpay.open();
-        } else {
-            toast.error("Failed to initiate payment. Please check the server response.");
-        }
-    } catch (error) {
-        console.error("Error during payment initiation:", error);
-        toast.error("An error occurred while initiating the payment. Please try again later.");
+  const addToCart = () => {
+    const cart = JSON.parse(sessionStorage.getItem("mrpackagecart")) || [];
+    const isItemInCart = cart.find((item) => item._id === data._id);
+    if (!isItemInCart) {
+      cart.push({
+        _id: data._id,
+        packageName: data.packageheading,
+        price: data.packagefinal,
+        destination: data.packagedestination,
+        // discount: data.packagedis,
+      });
+      sessionStorage.setItem("mrpackagecart", JSON.stringify(cart));
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        text: "Package added to cart!",
+        timer: 2000,
+        showConfirmButton: false,
+      });
+    } else {
+      Swal.fire({
+        icon: "info",
+        title: "Already in Cart",
+        text: "This package is already in your cart!",
+        timer: 2000,
+        showConfirmButton: false,
+      });
     }
-};
-
+  };
 
 
 
@@ -163,24 +114,8 @@ const navigate = useNavigate()
     getApiData();
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
     });
   }, []);
-
-  useEffect(() => {
-    if (data.packageheading) {
-      setPackageData((prev) => ({
-        ...prev,
-        packageCity: data.packageheading,
-        amount: data.packagefinal, // Ensure amount is updated
-      }));
-    }
-  }, [data]);
-
-
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
   return (
     <div className="tripcard">
@@ -227,7 +162,7 @@ const navigate = useNavigate()
               <Typography variant="h6">Package Price</Typography>
             </div>
             <div className="price">
-              <p style={{ fontWeight: "600", fontSize: "24px" }}>{data.packagefinal}</p>
+              <p style={{ fontWeight: "600", fontSize: "24px" }}>₹{data.packagefinal}</p>
               <p>
                 <del
                   style={{
@@ -236,7 +171,7 @@ const navigate = useNavigate()
                     color: "gray",
                   }}
                 >
-                  {data.packageprice}
+                  ₹{data.packageprice}
                 </del>
               </p>
             </div>
@@ -245,49 +180,8 @@ const navigate = useNavigate()
               Per Person (Taxes extra)
             </Typography>
             <Typography>
-              <button onClick={handleOpen} className="enquiry">Book Now</button>
+              <button className="enquiry" onClick={addToCart}>Add to Cart</button>
             </Typography>
-            <Modal
-              open={open}
-              onClose={handleClose}
-              aria-labelledby="modal-modal-title"
-              aria-describedby="modal-modal-description"
-            >
-              <Box sx={style}>
-                <Typography id="modal-modal-title" variant="h6" component="h2">
-                  Enter Your Detail
-                  <hr />
-                </Typography>
-                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                  <form onSubmit={postData}>
-                    <TextField id="outlined-basic" style={{ marginBottom: '1rem' }} fullWidth label="Name" variant="outlined" name="name" value={packageData.name} onChange={getInputdata} />
-                    <TextField id="outlined-basic" style={{ marginBottom: '1rem' }} fullWidth label="Email" variant="outlined" name="email" value={packageData.email} onChange={getInputdata} />
-                    <TextField id="outlined-basic" style={{ marginBottom: '1rem' }} fullWidth label="Phone Number" variant="outlined" name="phone" value={packageData.phone} onChange={getInputdata} />
-                    <TextField id="outlined-basic" style={{ marginBottom: '1rem' }} fullWidth label="Address" variant="outlined" name="address" value={packageData.address} onChange={getInputdata} />
-                    <TextField
-                      id="outlined-basic"
-                      style={{ marginBottom: '1rem' }}
-                      fullWidth
-                      label="Amount"
-                      variant="outlined"
-                      name="amount"
-                      value={packageData.amount}
-                      onChange={getInputdata}
-                      disabled
-                    />
-
-                    <Button
-                      style={{ background: "green", marginTop: "1rem" }}
-                      fullWidth
-                      variant="contained"
-                      type="submit"
-                    >
-                      Pay Now
-                    </Button>
-                  </form>
-                </Typography>
-              </Box>
-            </Modal>
             <Typography>
               <button className="whatsapp"><a href="https://wa.me/+919699862917" target="_blank" rel="noopener noreferrer">WhatsApp Me</a>
               </button>

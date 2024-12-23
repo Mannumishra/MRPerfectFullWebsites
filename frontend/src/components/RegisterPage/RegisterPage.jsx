@@ -1,40 +1,31 @@
 import React, { useEffect, useState } from 'react'
-// import bg from  './abstract-luxury-soft-red-background-christmas-valentines-layout-design-studio-room-web-template-business-report-with-smooth-circle-gradient-color.jpg'
 import './Register.css'
 import axios from 'axios'
-// import Loading from '../../components/Loading/Loading'
 import toast from 'react-hot-toast'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import bg from './contact-bg.jpg'
 
 const RegisterPage = () => {
+    const navigate = useNavigate()
     useEffect(() => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
         });
     }, []);
     const [loading, setLoading] = useState(false)
     const [formData, setFormData] = useState({
-        Name: "",
-        ContactNumber: "",
-        Email: "",
-        Password: ""
+        name: "",
+        number: "",
+        email: "",
+        password: ""
     })
     const handleChange = (e) => {
         const { name, value } = e.target;
         let newValue = value;
-
-        // Validate Contact Number: Allow only numbers and limit to 10 digits
-        if (name === "ContactNumber") {
-            // Remove non-numeric characters
+        if (name === "number") {
             newValue = newValue.replace(/\D/g, '');
-            // Limit to 10 digits
             newValue = newValue.slice(0, 10);
-
-
         }
-
         setFormData((prevData) => {
             return { ...prevData, [name]: newValue };
         });
@@ -42,27 +33,22 @@ const RegisterPage = () => {
     };
 
     const handleSubmit = async (event) => {
-        // setLoading(true)
+        setLoading(true)
         event.preventDefault()
         try {
-            const response = await axios.post("https://api.camrosteel.com/api/v1/Register", formData)
-            console.log(response.data);
-            toast.success('Sign in Successfully !!')
-            // setLoading(false)
-            window.location.href = "/log-in"
+            const response = await axios.post("https://api.mrandmrsperfecttrips.in/api/sign-up", formData)
+            if (response.status === 201) {
+                toast.success('Sign in Successfully !!')
+                navigate("/login")
+                setLoading(false)
+            }
         }
         catch (err) {
-            // console.log(err.response.data.message);
             toast.error(err.response.data.message)
-
-            // setLoading(false)
-
+            setLoading(false)
         } finally {
-
-            // setLoading(false)
+            setLoading(false)
         }
-
-
     }
 
     return (
@@ -79,11 +65,11 @@ const RegisterPage = () => {
                             <div className="form">
                                 <h3>Sign Up Account </h3>
 
-                                <form >
-                                    <input required type="text" name="Name" onChange={handleChange} value={formData.Name} placeholder='Name' />
-                                    <input required type="number" name="ContactNumber" onChange={handleChange} value={formData.ContactNumber} placeholder='Mobile Number' />
-                                    <input required type="email" name="Email" onChange={handleChange} value={formData.Email} placeholder='Email Id' />
-                                    <input required type="password" name="Password" value={formData.Password} onChange={handleChange} placeholder='Password' />
+                                <form onSubmit={handleSubmit}>
+                                    <input required type="text" name="name" onChange={handleChange} value={formData.name} placeholder='Name' />
+                                    <input required type="number" name="number" onChange={handleChange} value={formData.number} placeholder='Mobile Number' />
+                                    <input required type="email" name="email" onChange={handleChange} value={formData.email} placeholder='email Id' />
+                                    <input required type="password" name="password" value={formData.password} onChange={handleChange} placeholder='password' />
 
                                     <div className="flex">
                                         <div className="keep">

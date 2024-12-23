@@ -26,6 +26,9 @@ import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy'
 import TermsAndConditions from './components/TermsAndConditions/TermsAndConditions'
 import ReturnAndRefund from './components/ReturnAndRefund/ReturnAndRefund'
 import SuccessPage from './components/Successpage/Successpage'
+import Cart from './pages/Cart/Cart'
+import Profile from './pages/profile/Profile'
+import Checkout from './pages/Checkout/Checkout'
 
 // import LoginPage from './components/LoginPage/LoginPage'
 
@@ -56,8 +59,9 @@ function App() {
         <Route path="/terms-conditions" element={<TermsAndConditions />} />
         <Route path="/return-refund" element={<ReturnAndRefund />} />
         <Route path="/success" element={<SuccessPage />} />
-
-
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <Footer />
       <Toaster />
