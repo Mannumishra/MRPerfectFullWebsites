@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './DomesticTour.css'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 function DomesticTour() {
     const [data, setData] = useState([])
@@ -49,12 +50,16 @@ function DomesticTour() {
                     {
                         data.map((item, index) =>
                             <div className="col">
-                                <div className="img">
-                                    <img src={item.cityimage} alt="" />
-                                </div>
-                                <div className="info">
-                                    <span className='uppercase'>{item.cityname}</span>
-                                </div>
+                                <Link to={`/categorytour/${item.cityname}`}>
+                                    <div className="img">
+                                        <img src={item.cityimage} alt="" />
+                                    </div>
+                                </Link>
+                                <Link to={`/categorytour/${item.cityname}`}>
+                                    <div className="info">
+                                        <span className='uppercase'>{item.cityname}</span>
+                                    </div>
+                                </Link>
                             </div>
                         )
                     }

@@ -29,6 +29,7 @@ import SuccessPage from './components/Successpage/Successpage'
 import Cart from './pages/Cart/Cart'
 import Profile from './pages/profile/Profile'
 import Checkout from './pages/Checkout/Checkout'
+import InternationalPack from './components/FlightPage/InternationalPack'
 
 // import LoginPage from './components/LoginPage/LoginPage'
 
@@ -45,7 +46,8 @@ function App() {
         <Route path='/testimonial' element={<Testimonial />} />
         <Route path='/about' element={<AboutPage />} />
         <Route path='/hotel' element={<HotelPage />} />
-        <Route path='/package' element={<FlightPage />} />
+        <Route path='/domestic-package' element={<FlightPage />} />
+        <Route path='/international-package' element={<InternationalPack />} />
         <Route path='/register' element={<RegisterPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/domestic' element={<DomesticTour />} />

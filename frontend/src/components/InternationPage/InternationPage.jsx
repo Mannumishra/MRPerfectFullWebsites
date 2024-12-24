@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import './InternationPage.css'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 function InternationPage() {
-    const[ data,setData] = useState([])
-    const getApidata = async()=>{
+    const [data, setData] = useState([])
+    const getApidata = async () => {
         try {
             let res = await axios.get("https://api.mrandmrsperfecttrips.in/api/city")
             const newData = res.data.data
-            const filterdata = newData.filter((x)=>x.domesinternal=="INTERNATIONAL TOUR")
+            const filterdata = newData.filter((x) => x.domesinternal == "INTERNATIONAL TOUR")
             setData(filterdata)
         } catch (error) {
             console.log(error)
         }
     }
-    useEffect(()=>{
+    useEffect(() => {
         getApidata()
         window.scrollTo({
-            top : 0,
+            top: 0,
         })
-    },[])
+    }, [])
     return (
         <section className='hotel-page-section'>
             <div className="internation-bg">
@@ -51,18 +52,22 @@ function InternationPage() {
                 </div>
 
                 <div className="domestic-service-row">
-                 {
-                    data.map((item,index)=>
-                        <div className="col">
-                    <div className="img">
-                        <img src={item.cityimage} alt="" />
-                    </div>
-                    <div className="info">
-                        <span className='uppercase'>{item.cityname}</span>
-                    </div>
-                </div>
-                    )
-                 }
+                    {
+                        data.map((item, index) =>
+                            <div className="col">
+                                <Link to={`/categorytour/${item.cityname}`}>
+                                    <div className="img">
+                                        <img src={item.cityimage} alt="" />
+                                    </div>
+                                </Link>
+                                <Link to={`/categorytour/${item.cityname}`}>
+                                    <div className="info">
+                                        <span className='uppercase'>{item.cityname}</span>
+                                    </div>
+                                </Link>
+                            </div>
+                        )
+                    }
                 </div>
             </div>
 

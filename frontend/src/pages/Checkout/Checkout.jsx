@@ -232,13 +232,13 @@ const Checkout = () => {
               {cart.map((item) => (
                 <tr key={item._id}>
                   <td>{item.packageName}</td>
-                  <td>₹{item.price}</td>
+                  <td>INR{item.price}</td>
                 </tr>
               ))}
             </tbody>
           </table>
           <div className="totals">
-            <h3>Total: ₹{totalAmount}</h3>
+            <h3>Total: INR{totalAmount}</h3>
           </div>
           <button className="pay-button" onClick={handleCheckout}>
             Pay Now

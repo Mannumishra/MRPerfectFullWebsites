@@ -162,7 +162,7 @@ const MostPopularDetail = () => {
               <Typography variant="h6">Package Price</Typography>
             </div>
             <div className="price">
-              <p style={{ fontWeight: "600", fontSize: "24px" }}>₹{data.packagefinal}</p>
+              <p style={{ fontWeight: "600", fontSize: "24px" }}>INR {data.packagefinal}</p>
               <p>
                 <del
                   style={{
@@ -171,7 +171,7 @@ const MostPopularDetail = () => {
                     color: "gray",
                   }}
                 >
-                  ₹{data.packageprice}
+                  INR {data.packageprice}
                 </del>
               </p>
             </div>

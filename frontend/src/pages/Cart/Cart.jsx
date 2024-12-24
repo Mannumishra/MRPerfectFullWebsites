@@ -56,7 +56,7 @@ const Cart = () => {
                     <p className="product-description">{item.destination || "No description available."}</p>
                   </div>
                 </td>
-                <td>₹{item.price}</td>
+                <td>INR{item.price}</td>
                 <td>
                   <button onClick={() => removeFromCart(item._id)} className="remove-product">Remove</button>
                 </td>
@@ -70,7 +70,7 @@ const Cart = () => {
         <div className="totals-item totals-item-total">
           <label className="grand">Grand Total</label>
           <div className="totals-value" id="cart-total">
-            ₹ {getTotalPrice()}
+            INR {getTotalPrice()}
           </div>
           <button onClick={() => handleCheckout()} className="checkout">
             Checkout
