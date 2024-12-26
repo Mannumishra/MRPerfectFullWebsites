@@ -16,7 +16,7 @@ const Header = () => {
     { name: "About", href: "/about", current: true },
     { name: "Domestic Package", href: "/domestic-package", current: true },
     { name: "International Package", href: "/international-package", current: true },
-    { name: "Hotels", href: "/hotel", current: true },
+    // { name: "Hotels", href: "/hotel", current: true },
     { name: "Testinomial", href: "/testimonial", current: true },
     { name: "Contact", href: "/contact", current: true },
   ];

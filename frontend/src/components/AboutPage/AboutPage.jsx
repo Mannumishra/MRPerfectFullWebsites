@@ -16,13 +16,13 @@ function AboutPage() {
           </div>
           <div className="right">
             <span>About Us</span>
-            <p>Welcome to <span>MR AND MRS PERFECT TRIP PVT LTD</span> - Your ultimate gateway to unforgettable adventures and seamless travel experiences! Over the last 14 years, our team of dedicated and professional staff has provided cost-efficient tours through our network of services in India to suit the individual traveler requirements.</p>
+            <p>Welcome to <span>MR AND MRS PERFECT TRIP</span> - Your ultimate gateway to unforgettable adventures and seamless travel experiences! Over the last 14 years, our team of dedicated and professional staff has provided cost-efficient tours through our network of services in India to suit the individual traveler requirements.</p>
             <p>At <span>MR AND MRS PERFECT TRIP</span>, we believe in the transformative power of travel. Whether you're seeking an adrenaline-fueled adventure, a relaxing beach getaway, amazing time with your partner or cultural immersion in far-flung destinations, we've got you covered.</p>
             <p>With a passion for exploration and a commitment to excellence, we specialize in curating personalized travel experiences tailored to your unique preferences and desires. From meticulously planned itineraries to exclusive accommodations, Flights, and insider access to hidden gems, we strive to exceed your expectations every step of the way.</p>
           </div>
         </div>
         <div className="down">
-          <p>At <span>MR AND MRS PERFECT TRIP PVT LTD</span>, we understand that no two travelers are alike. That's why we offer a diverse range of travel options, from luxury escapes to budget-friendly adventures, solo expeditions to family-friendly vacations. Whatever your dream destination may be, we're here to turn your travel aspirations into reality.</p>
+          <p>At <span>MR AND MRS PERFECT TRIP </span>, we understand that no two travelers are alike. That's why we offer a diverse range of travel options, from luxury escapes to budget-friendly adventures, solo expeditions to family-friendly vacations. Whatever your dream destination may be, we're here to turn your travel aspirations into reality.</p>
           <p>Our team of experienced travel experts and our MD Mrs. Naina jain provides unparalleled service and support, ensuring that your journey is as seamless and stress-free as possible. Whether you're embarking on a solo adventure, planning a romantic getaway, organizing a group excursion or an educational trip, we're here to handle all the details so you can focus on making unforgettable memories.</p>
           <p>Join us as we explore the world's wonders, embrace new cultures, and create lifelong memories together. At <span>MR AND MRS PERFECT TRIP</span> the journey begins with you. Let us be your guide to extraordinary destinations and unforgettable experiences.</p>
         </div>

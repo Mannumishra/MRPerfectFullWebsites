@@ -64,6 +64,9 @@ const Categorytour = () => {
                     <p>
                       <span className="uppercase">{item.packageheading}</span>
                     </p>
+                    <p>
+                    Package Price INR {item.packagefinal}
+                    </p>
                     <button
                       style={{ color: "navy", fontSize: 16, fontWeight: "500", backgroundColor:"orange", padding:'0px 10px' , borderRadius:'1rem' , marginTop:'0.5rem' }}
                     >

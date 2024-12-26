@@ -30,14 +30,14 @@ function ServiceHomePage() {
                             <span>FLIGHT BOOKINGS</span>
                         </div>
                     </Link> */}
-                    <Link to={'/hotel'} className="same-col">
+                    {/* <Link to={'/hotel'} className="same-col">
                         <div className="img">
                             <img src={hotel} alt="" />
                         </div>
                         <div className="content">
                             <span>HOTEL BOOKINGS</span>
                         </div>
-                    </Link>
+                    </Link> */}
                     <Link to={'/domestic'} className="same-col">
                         <div className="img">
                             <img src={domestictour} alt="" />
@@ -54,7 +54,7 @@ function ServiceHomePage() {
                             <span>INTERNATIONAL TOUR</span>
                         </div>
                     </Link>
-                    <Link to={'/education'} className="same-col">
+                    {/* <Link to={'/education'} className="same-col">
                         <div className="img">
                             <img src={education} alt="" />
                         </div>
@@ -69,7 +69,7 @@ function ServiceHomePage() {
                         <div className="content">
                             <span>SEMINAR & CONFERENCE</span>
                         </div>
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         </section>

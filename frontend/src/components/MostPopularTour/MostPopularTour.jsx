@@ -38,7 +38,10 @@ function MostPopularTour() {
                 </div>
                 <div className="info">
                   <span className="uppercase">{item.cityname}</span>
+                  <p>Packages start from INR 50,000 to INR 1,50,000.</p>
+                  <Link className="view-all-button" to={`/categorytour/${item.cityname}`}>Expore More</Link>
                 </div>
+
               </Link>
             </div>
           ))}
