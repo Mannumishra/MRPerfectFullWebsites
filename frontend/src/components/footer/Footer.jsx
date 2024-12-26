@@ -29,8 +29,8 @@ const Footer = () => {
             {/* <li><Link to={'/hotel'}>Hotel</Link></li> */}
             <li><Link to={'/domestic'}>DOMESTIC TOUR PACKAGES</Link></li>
             <li><Link to={'/internation'}>INTERNATIONAL TOUR PACKAGES</Link></li>
-            <li><Link to={'/education'}>EDUCATIONAL TOUR PACKAGES</Link></li>
-            <li><Link to={'/seminar'}>CONFERENCE AND SEMINARS</Link></li>
+            {/* <li><Link to={'/education'}>EDUCATIONAL TOUR PACKAGES</Link></li>
+            <li><Link to={'/seminar'}>CONFERENCE AND SEMINARS</Link></li> */}
           </ul>
         </div>
         <div className="same-col col-3">
