@@ -9,7 +9,7 @@ function Testimonial() {
     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
             <div className="text-center">
-                <p className="text-lg font-medium text-gray-600 font-pj">2,157 people have said how good MR AND MRS PERFECT TRIP</p>
+                <p className="text-lg font-medium text-gray-600 font-pj">2,157 people have said how good MR AND MRS PERFECT TRIPs</p>
                 <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">Our happy clients say about us</h2>
             </div>
 
@@ -56,7 +56,7 @@ function Testimonial() {
                                 </div>
 
                                 <blockquote className="flex-1 mt-8">
-                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">“MR AND MRS PERFECT TRIP offers seamless booking, diverse accommodations, and curated leisure options. A must for travelers seeking convenience, quality, and memorable experiences.”</p>
+                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">“MR AND MRS PERFECT TRIPs offers seamless booking, diverse accommodations, and curated leisure options. A must for travelers seeking convenience, quality, and memorable experiences.”</p>
                                 </blockquote>
                             </div>
 
@@ -102,7 +102,7 @@ function Testimonial() {
                                 </div>
 
                                 <blockquote className="flex-1 mt-8">
-                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">“MR AND MRS PERFECT TRIP offers seamless booking, diverse accommodations, and curated services. From cozy rooms to thrilling activities, it's the ultimate travel companion.”</p>
+                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">“MR AND MRS PERFECT TRIPs offers seamless booking, diverse accommodations, and curated services. From cozy rooms to thrilling activities, it's the ultimate travel companion.”</p>
                                 </blockquote>
                             </div>
 
@@ -148,7 +148,7 @@ function Testimonial() {
                                 </div>
 
                                 <blockquote className="flex-1 mt-8">
-                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">“MR AND MRS PERFECT TRIP offers seamless booking, diverse accommodations, and curated services, making travel unforgettable. Highly recommend for hassle-free and enriching experiences!”</p>
+                                    <p className="text-lg leading-relaxed text-gray-900 font-pj">“MR AND MRS PERFECT TRIPs offers seamless booking, diverse accommodations, and curated services, making travel unforgettable. Highly recommend for hassle-free and enriching experiences!”</p>
                                 </blockquote>
                             </div>
 

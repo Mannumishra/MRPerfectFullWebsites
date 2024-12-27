@@ -11,7 +11,7 @@ const TermsAndConditions = () => {
     <div className="terms-container">
       <h1 className="terms-header">Terms and Conditions</h1>
       <p className="terms-intro">
-        Welcome to <strong>MR AND MRS PERFECT TRIP</strong>. By using our
+        Welcome to <strong>MR AND MRS PERFECT TRIPs</strong>. By using our
         services, you agree to comply with and be bound by the following terms
         and conditions. Please read them carefully.
       </p>
@@ -103,7 +103,7 @@ const TermsAndConditions = () => {
         </ul>
       </section>
       <footer className="terms-footer">
-        &copy; {new Date().getFullYear()} MR AND MRS PERFECT TRIP. All Rights
+        &copy; {new Date().getFullYear()} MR AND MRS PERFECT TRIPs. All Rights
         Reserved.
       </footer>
     </div>

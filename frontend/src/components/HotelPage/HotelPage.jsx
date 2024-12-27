@@ -19,7 +19,7 @@ function HotelPage() {
         <div className="hotal-detail">
           <span>About Hotel</span>
           <p>
-            Experience a world of luxury and comfort with MR AND MRS PERFECT TRIP Hotels! Our
+            Experience a world of luxury and comfort with MR AND MRS PERFECT TRIPs Hotels! Our
             exceptional hotel booking services are designed to enhance your
             travel experience from check-in to check-out. With a keen eye for
             detail and a dedication to excellence, we ensure that every aspect
@@ -37,11 +37,11 @@ function HotelPage() {
             Whether you're traveling for business or leisure, our comprehensive
             hotel booking services guarantee a seamless and stress-free
             experience, allowing you to relax and unwind in style. So why wait?
-            Let MR AND MRS PERFECT TRIP Hotels be your trusted partner in travel and embark on a
+            Let MR AND MRS PERFECT TRIPs Hotels be your trusted partner in travel and embark on a
             journey of unforgettable experiences today.
           </p>
           <p>
-            #LuxuryStay #ExceptionalService #TravelInStyle #MR AND MRS PERFECT TRIPHotels 🏨✨
+            #LuxuryStay #ExceptionalService #TravelInStyle #MR AND MRS PERFECT TRIPsHotels 🏨✨
           </p>
         </div>
 
@@ -248,7 +248,7 @@ function HotelPage() {
                             <div className="heading">
                                 <h2>Room & Appartment</h2>
                             </div>
-                            <p>Discover cozy rooms and spacious apartments for your travels with MR AND MRS PERFECT TRIP's convenient booking.</p>
+                            <p>Discover cozy rooms and spacious apartments for your travels with MR AND MRS PERFECT TRIPs's convenient booking.</p>
                         </div>
                         <div className="same-box">
                             <div className="icon">
@@ -259,7 +259,7 @@ function HotelPage() {
                             <div className="heading">
                                 <h2>Food & Restaurant</h2>
                             </div>
-                            <p>Explore culinary delights and dining experiences with MR AND MRS PERFECT TRIP's curated selection of food and restaurants.</p>
+                            <p>Explore culinary delights and dining experiences with MR AND MRS PERFECT TRIPs's curated selection of food and restaurants.</p>
                         </div>
                         <div className="same-box">
                             <div className="icon">
@@ -270,7 +270,7 @@ function HotelPage() {
                             <div className="heading">
                                 <h2>Spa & Fitness</h2>
                             </div>
-                            <p>Relax and rejuvenate with MR AND MRS PERFECT TRIP's spa and fitness offerings for a balanced travel experience.</p>
+                            <p>Relax and rejuvenate with MR AND MRS PERFECT TRIPs's spa and fitness offerings for a balanced travel experience.</p>
                         </div>
                         <div className="same-box">
                             <div className="icon">
@@ -281,7 +281,7 @@ function HotelPage() {
                             <div className="heading">
                                 <h2>Sports & Gaming</h2>
                             </div>
-                            <p>Enjoy sports excitement and gaming thrills with MR AND MRS PERFECT TRIP's array of leisure activities for travelers.</p>
+                            <p>Enjoy sports excitement and gaming thrills with MR AND MRS PERFECT TRIPs's array of leisure activities for travelers.</p>
                         </div>
                         <div className="same-box">
                             <div className="icon">
@@ -292,7 +292,7 @@ function HotelPage() {
                             <div className="heading">
                                 <h2>Event & Party</h2>
                             </div>
-                            <p>Elevate your events and celebrations with MR AND MRS PERFECT TRIP's curated selection of venues and party services.</p>
+                            <p>Elevate your events and celebrations with MR AND MRS PERFECT TRIPs's curated selection of venues and party services.</p>
                         </div>
                         <div className="same-box">
                             <div className="icon">
@@ -303,7 +303,7 @@ function HotelPage() {
                             <div className="heading">
                                 <h2>Gym & Yoga</h2>
                             </div>
-                            <p>Stay fit and centered while traveling with MR AND MRS PERFECT TRIP's gym and yoga facilities tailored for relaxation.</p>
+                            <p>Stay fit and centered while traveling with MR AND MRS PERFECT TRIPs's gym and yoga facilities tailored for relaxation.</p>
                         </div>
                     </div>
                 </div> */}

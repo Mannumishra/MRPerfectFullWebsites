@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
         <div className="privacy-container">
             <h1 className="privacy-header">Privacy and Policy</h1>
             <p className="privacy-intro">
-                Welcome to <strong>MR AND MRS PERFECT TRIP</strong>. This Privacy Policy
+                Welcome to <strong>MR AND MRS PERFECT TRIPs</strong>. This Privacy Policy
                 outlines how we collect, use, and safeguard your information while
                 providing our travel and tour services.
             </p>
@@ -75,7 +75,7 @@ const PrivacyPolicy = () => {
                 </ul>
             </section>
             <footer className="privacy-footer">
-                &copy; {new Date().getFullYear()} MR AND MRS PERFECT TRIP. All Rights
+                &copy; {new Date().getFullYear()} MR AND MRS PERFECT TRIPs. All Rights
                 Reserved.
             </footer>
         </div>

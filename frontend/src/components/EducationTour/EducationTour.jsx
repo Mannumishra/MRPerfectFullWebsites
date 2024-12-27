@@ -15,7 +15,7 @@ function EducationTour() {
             <div className="hotel-container">
                 <div className="hotal-detail domestic">
                     <span>EDUCATIONAL TOUR PACKAGES</span>
-                    <p>Embark on enriching educational journeys with MR AND MRS PERFECT TRIP's meticulously
+                    <p>Embark on enriching educational journeys with MR AND MRS PERFECT TRIPs's meticulously
                         curated tours! Our educational tours are designed to spark curiosity, inspire
                         lifelong learning, and create unforgettable experiences. Immerse yourself in
                         history, culture, and natural wonders as our expert guides lead you on a
@@ -34,7 +34,7 @@ function EducationTour() {
                     <p>Join us as we explore the wonders of our planet and inspire a love for learning
                         that lasts a lifetime. Let the adventure begin!
                     </p>
-                    <p>#EducationalTours #DiscoverAndLearn #MR AND MRS PERFECT TRIPAdventures 📚🌍�</p>
+                    <p>#EducationalTours #DiscoverAndLearn #MR AND MRS PERFECT TRIPsAdventures 📚🌍�</p>
                 </div>
             </div>
         </section>

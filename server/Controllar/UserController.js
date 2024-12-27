@@ -12,7 +12,7 @@ const getSignupEmailTemplate = (user) => `
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to MR AND MRS PERFECT TRIP</title>
+  <title>Welcome to MR AND MRS PERFECT TRIPs</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -61,11 +61,11 @@ const getSignupEmailTemplate = (user) => `
 <body>
   <div class="container">
     <div class="header">
-      Welcome to MR AND MRS PERFECT TRIP
+      Welcome to MR AND MRS PERFECT TRIPs
     </div>
     <div class="content">
       <p>Dear ${user.name},</p>
-      <p>Thank you for signing up with <strong>MR AND MRS PERFECT TRIP</strong>.</p>
+      <p>Thank you for signing up with <strong>MR AND MRS PERFECT TRIPs</strong>.</p>
       <p>
         We specialize in creating unforgettable local and international travel experiences. Explore the best packages tailored for your perfect trips!
       </p>
@@ -74,7 +74,7 @@ const getSignupEmailTemplate = (user) => `
     </div>
     <div class="footer">
       <p>Contact Us: 9699862917 | mrandmrsperfecttrips@gmail.com</p>
-      <p>© ${new Date().getFullYear()} MR AND MRS PERFECT TRIP. All rights reserved.</p>
+      <p>© ${new Date().getFullYear()} MR AND MRS PERFECT TRIPs. All rights reserved.</p>
     </div>
   </div>
 </body>
@@ -100,7 +100,7 @@ const signupUser = async (req, res) => {
         const mailOptions = {
             from: 'mannu22072000@gmail.com',
             to: newUser.email,
-            subject: "Welcome to MR AND MRS PERFECT TRIP!",
+            subject: "Welcome to MR AND MRS PERFECT TRIPs!",
             html: getSignupEmailTemplate(newUser)
         };
 

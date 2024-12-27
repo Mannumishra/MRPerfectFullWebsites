@@ -11,14 +11,14 @@ const ReturnAndRefund = () => {
     <div className="refund-container">
       <h1 className="refund-header">Return and Refund Policy</h1>
       <p className="refund-intro">
-        At <strong>MR AND MRS PERFECT TRIP</strong>, we aim to provide the best
+        At <strong>MR AND MRS PERFECT TRIPs</strong>, we aim to provide the best
         travel and tour services to our customers. Please read the following
         policy carefully:
       </p>
       <section className="refund-section">
         <h2 className="refund-subheader">No Return or Refund Policy</h2>
         <p>
-          We regret to inform you that <strong>MR AND MRS PERFECT TRIP</strong>{" "}
+          We regret to inform you that <strong>MR AND MRS PERFECT TRIPs</strong>{" "}
           does not offer any return or refund on the services or travel packages
           purchased. This policy is applicable to all transactions made through
           our company, including:
@@ -67,7 +67,7 @@ const ReturnAndRefund = () => {
         </ul>
       </section>
       <footer className="refund-footer">
-        &copy; {new Date().getFullYear()} MR AND MRS PERFECT TRIP. All Rights
+        &copy; {new Date().getFullYear()} MR AND MRS PERFECT TRIPs. All Rights
         Reserved.
       </footer>
     </div>
