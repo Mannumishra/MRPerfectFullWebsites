@@ -36,7 +36,7 @@ const Header = () => {
                     <h2 className="text-2xl font-extrabold text-[#7B3226]">
                       <Link to="/">
                         MR AND MRS{" "}
-                        <span className="text-[#C5733C]">PERFECT TRIPs</span>
+                        <span className="text-[#C5733C]">PERFECT TRIPS</span>
                       </Link>
                     </h2>
                   </div>

@@ -31,7 +31,7 @@ function AboutPage() {
             <span>Our Mission</span>
           </div>
           <div className="mission-content">
-            <p>At MR AND MRS PERFECT TRIPs, we are driven by an unwavering commitment to redefine the very
+            <p>At MR AND MRS PERFECT TRIPS, we are driven by an unwavering commitment to redefine the very
               essence of travel. Our mission transcends the mere act of journeying; it is a
               solemn vow to orchestrate transformative experiences that awaken the
               senses, enrich the soul, and cultivate a deep appreciation for the diverse
@@ -64,7 +64,7 @@ function AboutPage() {
             <span>Our VISION</span>
           </div>
           <div className="mission-content">
-            <p>At MR AND MRS PERFECT TRIPs, our ethos is grounded in a profound reverence for the
+            <p>At MR AND MRS PERFECT TRIPS, our ethos is grounded in a profound reverence for the
 transformative power of travel. We understand that each journey undertaken
 is not merely a physical movement from one place to another but an
 odyssey of self-discovery, cultural immersion, and personal growth. Our

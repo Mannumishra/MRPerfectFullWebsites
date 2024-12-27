@@ -27,6 +27,7 @@ const MostPopularDetail = () => {
   const getApiData = async () => {
     try {
       let res = await axios.get("https://api.mrandmrsperfecttrips.in/api/package/" + _id);
+      console.log(res)
       const fetchedData = res.data.data;
       setData(fetchedData);
       const dayDetails = [];
@@ -127,7 +128,7 @@ const MostPopularDetail = () => {
       <Container>
         <Grid container style={{ borderRadius: "1rem", overflow: "hidden" }}>
           <Grid item md={3}>
-            <img src={goa} width={"100%"} style={{ height: "100%" }} alt="" />
+            <img src={data.pic} width={"100%"} style={{ height: "100%" }} alt="" />
           </Grid>
           <Grid item md={6} style={{ backgroundColor: "white" }}>
             <Typography

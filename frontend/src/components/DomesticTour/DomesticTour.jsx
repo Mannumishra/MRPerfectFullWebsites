@@ -30,7 +30,7 @@ function DomesticTour() {
             <div className="hotel-container">
                 <div className="hotal-detail domestic">
                     <span>DOMESTIC TOUR PACKAGES</span>
-                    <p>Embark on an unforgettable journey through your own country with MR AND MRS PERFECT TRIPs's
+                    <p>Embark on an unforgettable journey through your own country with MR AND MRS PERFECT TRIPS
                         meticulously curated domestic packages! Our team of travel enthusiasts has
                         scoured every corner of the nation to bring you the most immersive and
                         memorable experiences. Discover hidden gems off the beaten path, immerse
@@ -40,10 +40,10 @@ function DomesticTour() {
                         in between, our diverse range of destinations promises something special for
                         every type of traveler.</p>
                     <p>With expertly crafted itineraries tailored to your preferences and the
-                        guidance of our dedicated travel experts, your journey with MR AND MRS PERFECT TRIPs will be
+                        guidance of our dedicated travel experts, your journey with MR AND MRS PERFECT TRIPS will be
                         nothing short of extraordinary. So pack your bags, grab your camera, and let
                         the adventure begin! 🌄🏝�</p>
-                    <p>#DomesticTravel #ExploreYourCountry #MR AND MRS PERFECT TRIPsAdventures</p>
+                    <p>#DomesticTravel #ExploreYourCountry #MR AND MRS PERFECT TRIPS Adventures</p>
                 </div>
 
                 <div className="domestic-service-row">

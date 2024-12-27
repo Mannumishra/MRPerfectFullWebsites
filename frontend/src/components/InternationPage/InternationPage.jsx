@@ -29,7 +29,7 @@ function InternationPage() {
             <div className="hotel-container">
                 <div className="hotal-detail domestic">
                     <span>INTERNATIONAL TOUR PACKAGES</span>
-                    <p>Embark on an extraordinary global adventure with MR AND MRS PERFECT TRIPs's curated
+                    <p>Embark on an extraordinary global adventure with MR AND MRS PERFECT TRIPS curated
                         international tour packages! Discover captivating destinations, immerse in
                         diverse cultures, and create timeless memories. Whether it's exploring
                         ancient wonders in Bali, experiencing the bustling streets of Thailand, or
@@ -41,7 +41,7 @@ function InternationPage() {
                         carefully planned. Pack your bags, expand your horizons, and let the
                         adventure begin!
                     </p>
-                    <p>At MR AND MRS PERFECT TRIPs, we understand that travel is more than just visiting new places; it's
+                    <p>At MR AND MRS PERFECT TRIPS, we understand that travel is more than just visiting new places; it's
                         about connecting with the world and creating meaningful experiences. That's
                         why we're committed to responsible tourism practices and sustainable
                         travel initiatives. Join us in exploring the world while leaving a positive impact
