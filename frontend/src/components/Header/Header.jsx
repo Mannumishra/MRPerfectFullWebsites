@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -16,24 +16,24 @@ const Header = () => {
     { name: "About", href: "/about", current: true },
     { name: "Domestic Package", href: "/domestic-package", current: true },
     { name: "International Package", href: "/international-package", current: true },
-    // { name: "Hotels", href: "/hotel", current: true },
-    { name: "Testinomial", href: "/testimonial", current: true },
+    // { name: "Testinomial", href: "/testimonial", current: true },
     { name: "Contact", href: "/contact", current: true },
   ];
   const userNavigation = [{ name: "Sign out", href: "#" }];
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
+
   return (
     <div className="min-h-full">
       <Disclosure as="nav" className="bg-white shadow-md">
-        {({ open }) => (
+        {({ open, setOpen }) => (
           <>
             <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
               <div className="flex h-16 items-center justify-between">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <h2 className="text-2xl font-extrabold text-[#7B3226]">
+                    <h2 className="text-2xl sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-[#7B3226]">
                       <Link to="/">
                         MR AND MRS{" "}
                         <span className="text-[#C5733C]">PERFECT TRIPS</span>
@@ -69,7 +69,7 @@ const Header = () => {
                           <Link to={"/cart"}>
                             <i
                               style={{ fontSize: "24px", color: "#7B3226" }}
-                              class="ri-shopping-cart-fill"
+                              className="ri-shopping-cart-fill"
                             ></i>
                           </Link>
                           {
@@ -154,6 +154,30 @@ const Header = () => {
               </div>
               <div className="border-t border-gray-700 pb-3 pt-4">
                 <div className="flex items-center px-5">
+                  {/* Cart and Profile Links for Mobile */}
+                  <Link to="/cart" className="mr-4" onClick={() => setOpen(false)}>
+                    <i
+                      style={{ fontSize: "24px", color: "#7B3226" }}
+                      className="ri-shopping-cart-fill"
+                    ></i>
+                  </Link>
+                  {loginValue ? (
+                    <Link
+                      className="px-3 py-2 cursor-pointer text-white font-bold small-cap rounded-[10px] bg-[#7B3226]"
+                      to="/profile"
+                      onClick={() => setOpen(false)}
+                    >
+                      Profile
+                    </Link>
+                  ) : (
+                    <Link
+                      className="px-3 py-2 cursor-pointer text-white font-bold small-cap rounded-[10px] bg-[#7B3226]"
+                      to="/register"
+                      onClick={() => setOpen(false)}
+                    >
+                      Register
+                    </Link>
+                  )}
                 </div>
                 <div className="mt-3 space-y-1 px-2">
                   {userNavigation.map((item) => (
