@@ -71,7 +71,7 @@ const navigate = useNavigate()
 
             // Step 2: Create Razorpay order and open payment modal
             const options = {
-                key:"rzp_live_6JnMJv4y3yPGxd", // Replace with your Razorpay key (from environment)
+                key:"rzp_test_o2zsKLnzNlKhCW", // Replace with your Razorpay key (from environment)
                 amount: amount * 100, // Convert to paise
                 currency: currency,
                 name: packageData.packageCity,
